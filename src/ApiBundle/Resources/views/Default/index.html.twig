@@ -1,0 +1,21 @@
+<h1> Country  listt  and all  informations</h1>
+<table width="100%">
+    <tr>
+        <td>Ip from</td>
+        <td>Ip to </td>
+        <td>Proxy</td>
+        <td>Country  code</td>
+        <td>Country</td>
+        <td>region</td>
+        <td>city</td>
+    </tr>
+    {% for item in items  %}
+        <td>{{ item.ipFrom }}</td>
+        <td>{{ item.ipTo }}</td>
+        <td>{{ item.proxyType }}</td>
+        <td>{{ item.countryCode }}</td>
+        <td>{{ item.country }}</td>
+        <td>{{ item.region }}</td>
+        <td>{{ item.city }}</td>
+    {% endfor %}
+</table>

@@ -1,0 +1,8 @@
+expirenotice: Attention, ce lien expirera dans 48 heures.
+resetting:
+  email:
+    subject: |
+      Réinitialisation de votre mot de passe
+    message: |
+      <p>Pour réinitialiser votre mot de passe, merci de cliquer sur le lien suivant :</p>
+      <p><a href="%resetUrl%">%resetUrl%</a></p>

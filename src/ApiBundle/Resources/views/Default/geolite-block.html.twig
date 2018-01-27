@@ -1,0 +1,13 @@
+<h1> Country  listt  and all  informations</h1>
+<table width="100%">
+    <tr>
+        <td>StartNum</td>
+        <td>Region</td>
+        <td>LocId</td>
+    </tr>
+    {% for item in items  %}
+        <td>{{ item.stratNum }}</td>
+        <td>{{ item.endNum }}</td>
+        <td>{{ item.locId }}</td>
+    {% endfor %}
+</table>

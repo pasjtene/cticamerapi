@@ -1,0 +1,8 @@
+expirenotice: Warning, this link will expire in 48 hours.
+resetting:
+  email:
+    subject: |
+      Reset your password
+    message: |
+      <p>To reset your password, please click on the following link:</p>
+      <p><a href="%resetUrl%">%resetUrl%</a></p>

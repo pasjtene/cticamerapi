@@ -1,0 +1,181 @@
+<html>
+<head>
+    <title> {% trans from "register" %} form.help.emailConfirm.objet {% endtrans %} </title>
+    <style>
+        body{
+            width: 100%;
+            font-size: 1.5em;
+        }
+        #body{
+            width: 70%;
+            border: solid 1px black;
+            padding: 2em;
+            -webkit-box-shadow:  0 0 0 2px  yellowgreen, 0 0 0 4px white, 0 0 0 6px #0275D8;
+            -moz-box-shadow:  0 0 0 2px  yellowgreen, 0 0 0 4px white, 0 0 0 6px  #0275D8;
+            box-shadow:  0 0 0 2px  yellowgreen , 0 0 0 4px white, 0 0 0 6px   #0275D8;
+        }
+        @media screen and (max-width: 700px) {
+            #body{
+                width: 90%;
+            }
+        }
+        table{
+            width: 100%;
+        }
+        table tr td:last-child{
+            text-align: right;
+        }
+        table #to a, #date {
+            color: darkgray;
+        }
+        #reason{
+            font-weight: bold;
+        }
+        #message{
+            margin: 2%;
+            padding: 1em;
+            background-color: #0275D8;
+            min-height: 150px;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+        }
+        img{
+            min-height: 30px;
+        }
+
+        a{
+            color:yellowgreen;
+        }
+
+        #title{
+            background-color:#0275D8;
+            color:  white;
+            font-weight: bold;
+            padding: 1%;
+            text-align: center;
+            margin: 2%;
+            border-radius: 6px;
+        }
+        #message #btn{
+            background-color: yellowgreen;
+            color: white;
+            padding: 2%;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+        #message #btn:hover{
+            background-color: green;
+        }
+        #help{
+            color: darkgrey;
+            padding: 2%;
+            min-height: 50px;
+            font-size: 0.8em;
+        }
+        #help strong{
+            color: black;
+        }
+        .img{
+            height: 150px;
+        }
+        #message table td{
+            font-size:2rem;
+            color: white;
+            text-align: justify;
+            padding: 2%;
+        }
+        #message table .second{
+            padding-left: 10%;
+        }
+        #message table td .message{
+            padding: 2%;
+            color: darkgrey;
+        }
+    </style>
+</head>
+<body>
+<div id="body" valign="center">
+    <table>
+        <tr>
+            <td>
+                <div id="from">Funglobe <a href="#">contact@funglobe.com</a>></div>
+                <div id="to">
+                    {% trans from "register" %} form.help.emailConfirm.to {% endtrans %}
+                    <a href="#"> {{ from }}</a>
+                </div>
+            </td>
+            <td>
+                <div id="date" >{{ ''|date() }}</div>
+            </td>
+        </tr>
+    </table>
+    <hr>
+
+    <div id="title">
+        {% trans from "register" %} form.help.emailConfirm.title {% endtrans %}
+    </div>
+
+    <div id="reason">
+        {% trans from "register" %} form.help.emailConfirm.reason {% endtrans %}
+    </div>
+
+    <div id="content">
+        {% trans from "register" %} form.help.emailConfirm.content {% endtrans %}
+    </div>
+    <br>
+    <img src="{{ logo }}" alt="">
+    <hr>
+    <div id="message">
+        <table style="font-size: 1rem;">
+            <tr>
+                <td>
+                    <img src="{{ asset('data/img/empty.png') }}" alt="" class="img">
+                </td>
+                <td class="second">
+                  {% trans with {'name':name, 'nameTo':nameTo } from 'invitation' %} hello {% endtrans %}
+                    {% if message !="" %}
+                        {% if gender=="F" %}
+                            {% trans from "invitation" %} she {% endtrans %}
+                        {% else %}
+                            {% trans from "invitation" %} he {% endtrans %}
+                        {% endif %}
+                    {% endif %}
+                    :
+                    <br>
+                    <div class="message">
+                        {{ message }}
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br>
+        {% trans with {'acceptLink':acceptLink, 'declineLink':declineLink, 'moreLink':moreLink } from "invitation" %} message {% endtrans %}
+    </div>
+
+    <hr>
+    <div id="footer">
+        <table>
+            <tr>
+                <td>
+                    <strong>{% trans from 'register' %} form.help.emailConfirm.phone {% endtrans %}:</strong> <br> 0044 1344 573229
+
+                    <br>
+                    <strong>{% trans from 'register' %} form.help.emailConfirm.adress {% endtrans %}: </strong>  <br>
+                           <span>
+                                6 Jaguar Lane, Bracknell, RG12 9PE, <br>
+                                Berkshire, United Kingdom.
+                            </span>
+                </td>
+                <td>
+                    <strong>{% trans from 'register' %} form.help.emailConfirm.contact {% endtrans %}: <br> </strong> <span>contact@funglobe.com</span> <br>
+                    <strong>{% trans from 'register' %} form.help.emailConfirm.website {% endtrans %}:
+                        <br></strong> <span><a href="#">www.funglobe.com</a></span>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+</body>
+</html>

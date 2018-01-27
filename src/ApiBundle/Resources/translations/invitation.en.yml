@@ -1,0 +1,4 @@
+hello: Hi name, <strong>  nameTo  </strong> wants to meet you.
+he: He left you a message
+she: She left you a message
+message: Click <a href="moreLink">  here </a> for details. You can reply directly to the inivation if you want. By clicking <a href="acceptLink">  accept </a>, you accept the invitation and if you <a href="declineLink">  decline </a> , you reject  the invitation

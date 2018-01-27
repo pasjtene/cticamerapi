@@ -1,0 +1,16 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: funglobe
+    database_user: root
+    database_password: Jt.pas./5
+    mailer_transport: smtp
+    mailer_host: smtp.achgroupe.com
+    mailer_user: info@achgroupe.com
+    mailer_password: achgroupe
+    mailer_auth_mode: login
+    mailer_port: 587
+    secret: stratege
+    database_driver: pdo_mysql
+    web_app_url : http://www.funglobe.com/

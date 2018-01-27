@@ -1,0 +1,151 @@
+<html>
+<head>
+    <title> {% trans from "register" %} form.help.emailConfirm.objet {% endtrans %} </title>
+    <style>
+        body{
+            width: 100%;
+            font-size: 1.5em;
+        }
+        #body{
+            width: 70%;
+            border: solid 1px black;
+            padding: 2em;
+            -webkit-box-shadow:  0 0 0 2px  yellowgreen, 0 0 0 4px white, 0 0 0 6px #0275D8;
+            -moz-box-shadow:  0 0 0 2px  yellowgreen, 0 0 0 4px white, 0 0 0 6px  #0275D8;
+            box-shadow:  0 0 0 2px  yellowgreen , 0 0 0 4px white, 0 0 0 6px   #0275D8;
+        }
+        @media screen and (max-width: 700px) {
+            #body{
+                width: 90%;
+            }
+        }
+        table{
+            width: 100%;
+        }
+        table tr td:last-child{
+            text-align: right;
+        }
+        table #to a, #date {
+            color: darkgray;
+        }
+        #reason{
+            font-weight: bold;
+        }
+        #message{
+            margin: 2%;
+            padding: 1em;
+            background-color: #0275D8;
+            min-height: 150px;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+        }
+        img{
+            min-height: 30px;
+        }
+
+        a{
+            color:yellowgreen;
+        }
+
+        #title{
+            background-color:#0275D8;
+            color:  white;
+            font-weight: bold;
+            padding: 1%;
+            text-align: center;
+            margin: 2%;
+            border-radius: 6px;
+        }
+        #message #btn{
+            background-color: yellowgreen;
+            color: white;
+            padding: 2%;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+        #message #btn:hover{
+            background-color: green;
+        }
+        #help{
+            color: darkgrey;
+            padding: 2%;
+            min-height: 50px;
+            font-size: 0.8em;
+        }
+        #help strong{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<div id="body" valign="center">
+    <table>
+        <tr>
+            <td>
+                <div id="from">Funglobe <<a href="#">contact@funglobe.com</a>></div>
+                <div id="to">
+                    {% trans from "register" %} form.help.emailConfirm.to {% endtrans %}
+                    <a href="#"> {{ email }}</a>
+                </div>
+            </td>
+            <td>
+                <div id="date" >{{ ''|date() }}</div>
+            </td>
+        </tr>
+    </table>
+    <hr>
+
+    <div id="title">
+        {% trans from "register" %} form.help.emailConfirm.title {% endtrans %}
+    </div>
+
+    <div id="reason">
+        {% trans from "register" %} form.help.emailConfirm.reason {% endtrans %}
+    </div>
+
+    <div id="content">
+        {% trans from "register" %} form.help.emailConfirm.content {% endtrans %}
+    </div>
+    <br>
+    <img src="{{ logo }}" alt="">
+    <hr>
+    <div id="message">
+        {% trans with {'name':name, 'url':confirm, "emails":email} from "register"  %} form.help.emailConfirm.message {% endtrans %}
+        <br>
+        <br>
+        <br>
+        <a href="{{ confirm }}" id="btn">{% trans from "register" %} form.help.emailConfirm.button {% endtrans %}</a>
+    </div>
+
+    <hr>
+    <div id="footer">
+        <table>
+            <tr>
+                <td>
+                    <strong>{% trans from 'register' %} form.help.emailConfirm.phone {% endtrans %}:</strong> <br> 0044 1344 573229
+
+                    <br>
+                    <strong>{% trans from 'register' %} form.help.emailConfirm.adress {% endtrans %}: </strong>  <br>
+                           <span>
+                                6 Jaguar Lane, Bracknell, RG12 9PE, <br>
+                                Berkshire, United Kingdom.
+                            </span>
+                </td>
+                <td>
+                    <strong>{% trans from 'register' %} form.help.emailConfirm.contact {% endtrans %}: <br> </strong> <span>contact@funglobe.com</span> <br>
+                    <strong>{% trans from 'register' %} form.help.emailConfirm.website {% endtrans %}:
+                        <br></strong> <span><a href="#">www.funglobe.com</a></span>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <div id="help">
+        {% trans with {'passwords':password, "urlPassword":urlPassword} from "register"  %} form.help.emailConfirm.curentpassword {% endtrans %}
+        <br>
+        {% trans with {'url':url} from "register"  %} form.help.emailConfirm.app {% endtrans %}
+    </div>
+</div>
+</body>
+</html>

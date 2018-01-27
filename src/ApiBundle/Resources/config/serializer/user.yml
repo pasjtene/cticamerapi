@@ -1,0 +1,10 @@
+AppBundle\Entity\User:
+    exclusion_policy: none
+    properties:
+        emailToken:
+            expose: false
+        confirmPassword:
+            expose: false
+        password:
+            expose: false
+

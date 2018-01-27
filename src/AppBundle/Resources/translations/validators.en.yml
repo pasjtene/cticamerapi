@@ -1,0 +1,15 @@
+User:
+  NotBlank:
+    email: The adresse email is required
+    password: The password is required
+Message:
+  NotBlank:
+    content: the content of message is required
+File:
+  NotBlank:
+    name: The name is required
+    hahsname: The hashname is required
+  Unique:
+    hashname: The hashname specified already exist
+  Gt:
+    size: The size of file have to be greater than 0

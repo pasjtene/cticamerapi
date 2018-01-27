@@ -1,0 +1,36 @@
+security:
+    encoders:
+        FOS\UserBundle\Model\UserInterface: sha256
+    role_hierarchy:
+        ROLE_MEMBER:           [ROLE_MEMBER]
+        ROLE_MODERATOR:        [ROLE_MEMBER,ROLE_MODERATOR]
+        ROLE_ADMIN:            [ROLE_MODERATOR, ROLE_ALLOWED_TO_SWITCH]
+
+    providers:
+       auth_token_user_provider:
+           id: auth_token_user_provider
+    firewalls:
+       dev:
+           pattern:  ^/(_(profiler|wdt)|css|images|js)/
+           security: false
+
+       main:
+           pattern: ^/v1/auth
+           stateless: true
+           simple_preauth:
+               authenticator: auth_token_authenticator
+           provider: auth_token_user_provider
+           anonymous: ~
+
+
+    access_control:
+            #api
+            - { path: ^/[^/]+/resetpassword, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+            - { path: ^/lagout$, role: IS_AUTHENTICATED_FULLY }
+            # back-office
+            - { path: ^/[^/]+/admin/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+            - { path: ^/[^/]+/private, roles: ROLE_MEMBER }
+            - { path: ^/[^/]+/admin, roles: ROLE_MODERATOR }
+            - { path: ^/[^/]+/sadmin, roles: ROLE_ADMIN }
+            # front-office
+            - { path: ^/, role: IS_AUTHENTICATED_ANONYMOUSLY }

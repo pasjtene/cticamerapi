@@ -1,0 +1,25 @@
+form:
+  help:
+    lastname: The poeples like your last name
+    emailConfirm:
+      title:  <strong> Funglobe </strong>( réseau social pour s'amuser et rencontrer de nouveaux amis)
+      objet: Confirme ton adresse email
+      reason: Se faire  des bon amis   n'a jamais été aussi  facile
+      to: A
+      content: |
+       Avec funglobe revivez c'est  l'objectif. <br>
+       Découvrez des nouveaux amis et  profiter pour entrer en contact avec plus de 51 millions professionnels repondant  a vos besoins. <br>
+      message: |
+       <h3> name, </h3>
+        vous êtes le bienvenue parmis plus de 350 millions d'utilisateurs de <strong>funglobe </strong>. <br/> <br/>
+       pour plusieurs raisons,  nous voulons se rassurer que l'adresse email  <a href=''> emails </a> vous appartient  vraiment.  <br/>
+       Veillez  cliquer sur le bouton  vert pour valider votre adresse email.
+      button: Confirmer votre adresse email
+      contact: Contact
+      phone: Téléphone
+      website: Site internet
+      adress: Adresse
+      curentpassword: |
+       voici  vore mot de passe actuel <strong>passwords</strong>, si  vous souhaitez reinitialiser  votre  mot  de passe,  veillez cliquer <a href="urlPassword"> ici </a>
+      app: |
+       Vous pouvez consulter le même email  directement depuis <strong>www.funglobe.com</strong> en cliquant sur ce lien <a href="url">url</a>

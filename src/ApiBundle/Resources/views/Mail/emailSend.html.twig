@@ -1,0 +1,93 @@
+<html>
+<head>
+    <title> {% trans from "register" %} form.help.emailConfirm.objet {% endtrans %} </title>
+    <style>
+        body{
+            width: 100%;
+            font-size: 1.5em;
+        }
+        #body{
+            width: 70%;
+            border: solid 1px black;
+            padding: 2em;
+            -webkit-box-shadow:  0 0 0 2px  yellowgreen, 0 0 0 4px white, 0 0 0 6px #0275D8;
+            -moz-box-shadow:  0 0 0 2px  yellowgreen, 0 0 0 4px white, 0 0 0 6px  #0275D8;
+            box-shadow:  0 0 0 2px  yellowgreen , 0 0 0 4px white, 0 0 0 6px   #0275D8;
+        }
+        @media screen and (max-width: 700px) {
+            #body{
+                width: 90%;
+            }
+        }
+        table{
+            width: 100%;
+        }
+        table tr td:last-child{
+            text-align: right;
+        }
+        table #to a, #date {
+            color: darkgray;
+        }
+        #reason{
+            font-weight: bold;
+        }
+        #message{
+            margin: 0 2% 0 2%;
+            padding: 1em;
+            color: #000;
+            text-align: left;
+        }
+
+        a{
+            color:yellowgreen;
+        }
+
+        #title{
+            background-color:#0275D8;
+            color:  white;
+            font-weight: bold;
+            padding: 1%;
+            text-align: center;
+            margin: 2%;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+<div id="body" valign="center">
+    <div id="title">
+        {{ title }}
+    </div>
+
+    <div id="message">
+        <p>
+            {{ message|raw }}
+        </p>
+    </div>
+
+    <hr>
+    <div id="footer">
+        <table>
+            <tr>
+                <td>
+                    <strong>{% trans from 'register' %} form.help.emailConfirm.phone {% endtrans %}:</strong> <br> 0044 1344 573229
+
+                    <br>
+                    <strong>{% trans from 'register' %} form.help.emailConfirm.adress {% endtrans %}: </strong>  <br>
+                           <span>
+                                6 Jaguar Lane, Bracknell, RG12 9PE, <br>
+                                Berkshire, United Kingdom.
+                            </span>
+                </td>
+                <td>
+                    <strong>{% trans from 'register' %} form.help.emailConfirm.contact {% endtrans %}: <br> </strong> <span>contact@funglobe.com</span> <br>
+                    <strong>{% trans from 'register' %} form.help.emailConfirm.website {% endtrans %}:
+                        <br></strong> <span><a href="#">www.funglobe.com</a></span>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+</body>
+</html>
